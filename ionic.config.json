@@ -1,0 +1,7 @@
+{
+  "name": "PimPelod",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
