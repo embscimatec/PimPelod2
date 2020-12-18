@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-  <img width=300px height=200px src=".assets/logo.png" alt="Logo do Projeto"></a>
+  <img width=300px height=200px src="./assets/logo.png" alt="Logo do Projeto"></a>
 </p>
 
 <h3 align="center">Aplicativo PIM&PELOD 2.0</h3>
