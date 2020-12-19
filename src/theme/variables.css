@@ -1,6 +1,14 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('../assets/fonts/PressStart2P-Regular.ttf');
+}
+
+ion-text {
+  font-family: 'Press Start 2P';
+}
 
 /** Ionic CSS Variables **/
 :root {
