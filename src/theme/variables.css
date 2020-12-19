@@ -12,6 +12,11 @@ ion-text {
 
 ion-card {
   border-radius: 25px;
+  padding-left: 2%;
+}
+
+ion-card-content {
+  color: #000000;
 }
 
 /** Ionic CSS Variables **/
