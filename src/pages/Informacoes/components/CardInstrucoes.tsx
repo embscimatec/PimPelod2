@@ -17,17 +17,17 @@ const CardInstrucoes: React.FC = () => {
                 <IonRow class="ion-margin-bottom">
                     <h4>
                         Passo 1: explicação aa aaasa aaaaaaaaaaaaaaa
-                </h4>
+                    </h4>
                 </IonRow>
                 <IonRow class="ion-margin-bottom">
                     <h4>
                         Passo 2: Descrição do passo 2 aaaaaaaaaaaaaa
-                </h4>
+                    </h4>
                 </IonRow>
                 <IonRow class="ion-margin-bottom">
                     <h4>
                         Pass 3: Descrição do Passo 3 aaaaaaaaaaaaaaaaa
-                </h4>
+                    </h4>
                 </IonRow>
             </IonCardContent>
         </IonCard>
