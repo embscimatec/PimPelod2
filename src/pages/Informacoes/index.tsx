@@ -1,6 +1,7 @@
 import { IonCol, IonContent, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
 import React from 'react';
 import CardInstrucoes from './components/CardInstrucoes';
+import CardSobreNos from './components/CardSobreNos';
 
 const Informacoes: React.FC = () => {
 
@@ -19,6 +20,9 @@ const Informacoes: React.FC = () => {
                             </IonRow>
                             <IonRow class="ion-justify-content-center">
                                 <CardInstrucoes />
+                            </IonRow>
+                            <IonRow class="ion-justify-content-center">
+                                <CardSobreNos />
                             </IonRow>
                         </IonCol>
                     </IonGrid>
