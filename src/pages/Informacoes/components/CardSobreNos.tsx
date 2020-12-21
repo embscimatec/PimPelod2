@@ -1,7 +1,13 @@
 import { IonCard, IonCardContent, IonRow } from '@ionic/react';
 import React from 'react';
 
+interface PalavraChave {
+    palavra:string,
+    descricao:string
+};
+
 const CardSobreNos: React.FC = () => {
+
 
     return (
         <IonCard>
