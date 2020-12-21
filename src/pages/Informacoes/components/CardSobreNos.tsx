@@ -21,9 +21,9 @@ const CardSobreNos: React.FC = () => {
                         </h4>
                     </div>
                     <div className="texto">
-                        <h4>
+                        <p>
                             O Instituto de Engenheiros Eletricistas e Eletrônicos ou Instituto de Engenheiros Eletrotécnicos e Eletrónicos ou IEEE é uma organização profissional sem fins lucrativos. O IEEE é a maior organização profissional técnica do mundo dedicada ao avanço da tecnologia em benefício da humanidade.
-                        </h4>
+                        </p>
                     </div>
                 </IonRow>
                 <IonRow class="ion-margin-bottom">
@@ -33,11 +33,11 @@ const CardSobreNos: React.FC = () => {
                         </h4>
                     </div>
                     <div className="texto">
-                        <h4>
+                        <p>
                             O presente aplicativo busca realizar de forma rápida e eficiente os cálculos da
                             probabilidade de mortalidade (<i>PIM</i>) e disfunção de órgãos de uma criança (<i>PELOD</i>), para melhorar e otimizar
                             o atendimento nas UTIPs.
-                        </h4>
+                        </p>
                     </div>
                 </IonRow>
                 <IonRow class="ion-margin-bottom">
