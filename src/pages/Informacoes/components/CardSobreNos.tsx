@@ -1,4 +1,4 @@
-import { IonCard, IonCardContent, IonRow } from '@ionic/react';
+import { IonCard, IonCardContent, IonCol, IonRow } from '@ionic/react';
 import React from 'react';
 import Antonio from '../../../assets/Antonio.png';
 import Fernanda from '../../../assets/Fernanda.png';
@@ -40,17 +40,23 @@ const CardSobreNos: React.FC = () => {
                         </p>
                     </div>
                 </IonRow>
-                <IonRow class="ion-margin-bottom">
+                <IonRow>
                     <div className="titulo">
                         <h4>
                             Desenvolvedores:
                         </h4>
-                    </div>                    
+                    </div>
                 </IonRow>
-                <IonRow class="ion-justify-content-center">
-                    <img src={Antonio} />
-                    <img src={Fernanda} />
-                    <img src={Maria} />
+                <IonRow class="ion-justify-content-center ion-margin-bottom">
+                    <IonCol class="ion-margin-end">
+                        <img src={Antonio} />
+                    </IonCol>
+                    <IonCol class="ion-margin-end">
+                        <img src={Fernanda} />
+                    </IonCol>
+                    <IonCol>
+                        <img src={Maria} />
+                    </IonCol>
                 </IonRow>
             </IonCardContent>
         </IonCard>
