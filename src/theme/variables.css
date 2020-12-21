@@ -26,7 +26,7 @@ ion-card-content {
 .titulo {
   font-style: oblique;
   margin-left: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 5%;
 }
 
 /** Ionic CSS Variables **/
