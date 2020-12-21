@@ -8,7 +8,7 @@ const CardSobreNos: React.FC = () => {
 
     return (
         <IonCard>
-            <IonCardContent class="ion-margin-top">
+            <IonCardContent class="ion-margin-top ion-margin-bottom">
                 <IonRow class="ion-margin-bottom">
                     <h2>
                         Sobre Nós
