@@ -19,6 +19,9 @@ ion-card-content {
   color: #000000;
 }
 
+.texto {
+  text-align: justify;
+}
 
 /** Ionic CSS Variables **/
 :root {
