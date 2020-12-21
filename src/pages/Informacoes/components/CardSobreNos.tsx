@@ -24,7 +24,20 @@ const CardSobreNos: React.FC = () => {
                         </h4>
                     </div>
                 </IonRow>
-
+                <IonRow class="ion-margin-bottom">
+                    <div className="titulo">
+                        <h4>
+                            Do objetivo:
+                        </h4>
+                    </div>
+                    <div className="texto">
+                        <h4>
+                            O presente aplicativo busca realizar de forma rápida e eficiente os cálculos da
+                            probabilidade de mortalidade (<i>PIM</i>) e disfunção de órgãos de uma criança (<i>PELOD</i>), para melhorar e otimizar
+                            o atendimento nas UTIPs.
+                        </h4>
+                    </div>
+                </IonRow>
             </IonCardContent>
         </IonCard>
     );
