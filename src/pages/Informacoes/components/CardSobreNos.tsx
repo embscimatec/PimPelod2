@@ -1,6 +1,8 @@
 import { IonCard, IonCardContent, IonRow } from '@ionic/react';
 import React from 'react';
-
+import Antonio from '../../../assets/Antonio.png';
+import Fernanda from '../../../assets/Fernanda.png';
+import Maria from '../../../assets/Maria.png';
 
 const CardSobreNos: React.FC = () => {
 
@@ -37,6 +39,18 @@ const CardSobreNos: React.FC = () => {
                             o atendimento nas UTIPs.
                         </h4>
                     </div>
+                </IonRow>
+                <IonRow class="ion-margin-bottom">
+                    <div className="titulo">
+                        <h4>
+                            Desenvolvedores:
+                        </h4>
+                    </div>                    
+                </IonRow>
+                <IonRow class="ion-justify-content-center">
+                    <img src={Antonio} />
+                    <img src={Fernanda} />
+                    <img src={Maria} />
                 </IonRow>
             </IonCardContent>
         </IonCard>
