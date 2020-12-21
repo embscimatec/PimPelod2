@@ -3,6 +3,7 @@ import React from 'react';
 import Antonio from '../../../assets/Antonio.png';
 import Fernanda from '../../../assets/Fernanda.png';
 import Maria from '../../../assets/Maria.png';
+import logoEmbs from '../../../assets/logoEmbs.png'
 
 const CardSobreNos: React.FC = () => {
 
@@ -13,6 +14,9 @@ const CardSobreNos: React.FC = () => {
                     <h2>
                         Sobre Nós
                     </h2>
+                </IonRow>
+                <IonRow class="ion-justify-content-center ion-margin-bottom">
+                    <img src={logoEmbs} />
                 </IonRow>
                 <IonRow class="ion-margin-bottom">
                     <div className="titulo">
