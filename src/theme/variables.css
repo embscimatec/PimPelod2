@@ -23,6 +23,12 @@ ion-card-content {
   text-align: justify;
 }
 
+.titulo {
+  font-style: oblique;
+  margin-left: 1%;
+  margin-bottom: 1%;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
