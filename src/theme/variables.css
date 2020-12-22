@@ -33,27 +33,27 @@ ion-card-content {
 :root {
   /** primary **/
   --ion-color-primary: #7795F4;
-  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-rgb: 119, 149, 244;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: #5e80f0;
+  --ion-color-primary-tint: #89a2f3;
 
   /** secondary **/
-  --ion-color-secondary: #3dc2ff;
-  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary: #4B4BD1;
+  --ion-color-secondary-rgb: 75, 75, 209;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;
+  --ion-color-secondary-shade: #3a3ad3;
+  --ion-color-secondary-tint: #5b5bcf;
 
   /** tertiary **/
-  --ion-color-tertiary: #5260ff;
-  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary: #323289;
+  --ion-color-tertiary-rgb: 50, 50, 137;
   --ion-color-tertiary-contrast: #ffffff;
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
-  --ion-color-tertiary-shade: #4854e0;
-  --ion-color-tertiary-tint: #6370ff;
+  --ion-color-tertiary-shade: #28288a;
+  --ion-color-tertiary-tint: #3d3d8f;
 
   /** success **/
   --ion-color-success: #2dd36f;
