@@ -19,11 +19,11 @@ ion-card-content {
   color: #000000;
 }
 
-.texto {
+.textos p {
   text-align: justify;
 }
 
-.titulo {
+.textos h4 {
   font-style: oblique;
   margin-left: 1%;
   margin-bottom: 5%;
