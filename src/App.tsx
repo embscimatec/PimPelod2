@@ -12,8 +12,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { calculator, informationCircle, fileTrayFull, bookmarks } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import Calcular from './pages/EscolhaCálculo';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -40,17 +39,18 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
+          <Route path="/seusCalculos" component={Tab1} exact={true} />
+          <Route path="/calcular" component={Calcular} exact={true} />
           <Route path="/informacoes" component={Informacoes} />
-          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+          <Route path="/glossario" component={Tab1} exact={true}/>
+          <Route path="/" render={() => <Redirect to="/seusCalculos" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+          <IonTabButton tab="SeusCalculos" href="/seusCalculos">
             <IonIcon icon={fileTrayFull} />
             <IonLabel>Seus cálculos</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="calcular" href="/calcular">
             <IonIcon icon={calculator} />
             <IonLabel>Calcular</IonLabel>
           </IonTabButton>
@@ -58,7 +58,7 @@ const App: React.FC = () => (
             <IonIcon icon={informationCircle} />
             <IonLabel>Informações</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="/" href="/tab1">
+          <IonTabButton tab="glossario" href="/glossario">
             <IonIcon icon={bookmarks}  />
             <IonLabel>Glossário</IonLabel>
           </IonTabButton>
