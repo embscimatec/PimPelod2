@@ -29,6 +29,10 @@ ion-card-content {
   margin-bottom: 5%;
 }
 
+.titulo h2{
+  text-align: center;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/

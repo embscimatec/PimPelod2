@@ -33,6 +33,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Informacoes from './pages/Informacoes';
+import DadosPaciente from './pages/DadosDoPaciente';
 
 const App: React.FC = () => (
   <IonApp>
@@ -43,6 +44,7 @@ const App: React.FC = () => (
           <Route path="/calcular" component={Calcular} exact={true} />
           <Route path="/informacoes" component={Informacoes} />
           <Route path="/glossario" component={Tab1} exact={true}/>
+          <Route path="/dadosPaciente" component={DadosPaciente} exact={true}/>
           <Route path="/" render={() => <Redirect to="/seusCalculos" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
