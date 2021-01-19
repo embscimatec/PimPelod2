@@ -23,7 +23,7 @@ const ConceitosAplicados: React.FC = () => {
         <div className="textos" >
             <IonRow class="ion-margin-bottom">
                 <h2>
-                    Palavras Chaves
+                    Conceitos Aplicados
                 </h2>
             </IonRow>
             {
