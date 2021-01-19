@@ -2,6 +2,7 @@ import { IonPage, IonContent, IonGrid, IonRow, IonText, IonCol, IonCard, IonCard
 import React from 'react';
 import ConceitosAplicados from './components/CardConceitosAplicados';
 import PalavrasChaves from './components/CardPalavrasChaves';
+import Referencias from './components/CardReferencias';
 
 const Glossario: React.FC = () => {
     return (
@@ -24,6 +25,7 @@ const Glossario: React.FC = () => {
                                         <IonItemDivider mode="md" />
                                         <ConceitosAplicados />
                                         <IonItemDivider mode="md" />
+                                        <Referencias />
                                     </IonCardContent>
                                 </IonCard>
                             </IonRow>
