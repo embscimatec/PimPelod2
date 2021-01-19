@@ -20,7 +20,7 @@ const Glossario: React.FC = () => {
                                 <IonCard>
                                     <IonCardContent class="ion-margin-top">
                                         <PalavrasChaves />
-                                        <IonItemDivider />
+                                        <IonItemDivider mode="md" />
                                     </IonCardContent>
                                 </IonCard>
                             </IonRow>
