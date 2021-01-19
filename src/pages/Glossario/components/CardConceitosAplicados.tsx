@@ -1,4 +1,5 @@
 import React from 'react';
+import { IonRow } from '@ionic/react';
 
 interface Conceito {
     nome: string,
@@ -19,8 +20,22 @@ const ConceitosAplicados: React.FC = () => {
     ];
 
     return(
-        <>
-        </>
+        <div className="textos" >
+            <IonRow class="ion-margin-bottom">
+                <h2>
+                    Palavras Chaves
+                </h2>
+            </IonRow>
+            {
+                conceitos.map((obj: Conceito) => {
+                    return <IonRow class="ion-margin-top">
+                        <p>
+                            {obj.nome}: {obj.descricao}.
+                        </p>
+                    </IonRow>
+                })
+            }
+        </div>
     );
 };
 
