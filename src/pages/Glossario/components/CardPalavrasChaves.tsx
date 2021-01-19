@@ -91,7 +91,7 @@ const PalavrasChaves: React.FC = () => {
     ];
 
     return (
-        <>
+        <div className="textos" >
             <IonRow class="ion-margin-bottom">
                 <h2>
                     Palavras Chaves
@@ -106,7 +106,7 @@ const PalavrasChaves: React.FC = () => {
                     </IonRow>
                 })
             }
-        </>
+        </div>
     );
 };
 
