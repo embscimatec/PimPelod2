@@ -14,7 +14,7 @@ import {
 import logoApp from "../../assets/logoApp.svg";
 import React from "react";
 
-const Informacoes: React.FC = () => {
+const EscolhaCalculo: React.FC = () => {
   return (
     <>
       <IonPage>
@@ -65,4 +65,4 @@ const Informacoes: React.FC = () => {
   );
 };
 
-export default Informacoes;
+export default EscolhaCalculo;
