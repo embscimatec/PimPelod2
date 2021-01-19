@@ -99,7 +99,7 @@ const PalavrasChaves: React.FC = () => {
             </IonRow>
             {
                 elementos.map((obj: PalavraChave) => {
-                    return <IonRow class="ion-margin-bottom">
+                    return <IonRow class="ion-margin-top">
                         <p>
                             {obj.palavra}: {obj.descricao}.
                         </p>
