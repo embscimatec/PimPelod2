@@ -1,6 +1,12 @@
 import React from 'react';
 import { IonRow } from '@ionic/react';
 
+interface Referencia {
+    autor: string,
+    titulo: string,
+    complemento: string
+};
+
 const Referencias: React.FC = () => {
 
     return (
