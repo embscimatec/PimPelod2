@@ -21,7 +21,7 @@ const ConceitosAplicados: React.FC = () => {
 
     return(
         <div className="textos" >
-            <IonRow class="ion-margin-bottom">
+            <IonRow class="ion-margin-top">
                 <h2>
                     Conceitos Aplicados
                 </h2>
