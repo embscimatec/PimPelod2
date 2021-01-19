@@ -92,12 +92,10 @@ const PalavrasChaves: React.FC = () => {
 
     return (
         <>
-            <IonCard>
-                <IonCardContent class="ion-margin-top">
             <IonRow class="ion-margin-bottom">
                 <h2>
                     Palavras Chaves
-                    </h2>
+                </h2>
             </IonRow>
             {
                 elementos.map((obj: PalavraChave) => {
@@ -108,8 +106,6 @@ const PalavrasChaves: React.FC = () => {
                     </IonRow>
                 })
             }
-            </IonCardContent>
-        </IonCard>
         </>
     );
 };
