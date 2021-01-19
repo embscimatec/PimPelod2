@@ -19,7 +19,7 @@ const ConceitosAplicados: React.FC = () => {
         },
     ];
 
-    return(
+    return (
         <div className="textos" >
             <IonRow class="ion-margin-top">
                 <h2>

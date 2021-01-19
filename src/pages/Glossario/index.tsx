@@ -23,6 +23,7 @@ const Glossario: React.FC = () => {
                                         <PalavrasChaves />
                                         <IonItemDivider mode="md" />
                                         <ConceitosAplicados />
+                                        <IonItemDivider mode="md" />
                                     </IonCardContent>
                                 </IonCard>
                             </IonRow>
