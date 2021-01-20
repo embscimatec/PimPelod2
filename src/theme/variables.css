@@ -11,8 +11,7 @@ ion-text {
 }
 
 ion-card {
-  border-radius: 25px;
-  padding-left: 2%;
+  border-radius: 25px; 
 }
 
 ion-card-content {
@@ -27,6 +26,19 @@ ion-card-content {
   font-style: oblique;
   margin-left: 1%;
   margin-bottom: 5%;
+}
+
+.textos h2 {
+  font-weight: bold;
+  font-size: large;
+}
+
+.referencias {
+  text-align: left;
+}
+
+.referencias p{
+  width: 100%;
 }
 
 /** Ionic CSS Variables **/
