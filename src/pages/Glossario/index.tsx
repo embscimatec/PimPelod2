@@ -1,4 +1,4 @@
-import { IonPage, IonContent, IonGrid, IonRow, IonText, IonCol, IonCard, IonCardContent, IonItemDivider } from '@ionic/react';
+import { IonPage, IonContent, IonGrid, IonRow, IonText, IonCol, IonList, IonCard, IonCardContent, IonItemDivider } from '@ionic/react';
 import React from 'react';
 import ConceitosAplicados from './components/CardConceitosAplicados';
 import PalavrasChaves from './components/CardPalavrasChaves';
@@ -22,11 +22,13 @@ const Glossario: React.FC = () => {
                     </IonGrid>
                     <IonCard>
                         <IonCardContent class="ion-margin-top">
+                            <IonList>
                             <PalavrasChaves />
                             <IonItemDivider mode="md" />
                             <ConceitosAplicados />
                             <IonItemDivider mode="md" />
                             <Referencias />
+                            </IonList>
                         </IonCardContent>
                     </IonCard>
                     <br />
