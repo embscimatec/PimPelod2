@@ -18,19 +18,18 @@ const Glossario: React.FC = () => {
                                     </h2>
                                 </IonText>
                             </IonRow>
-                            <IonRow class="ion-justify-content-center">
-                                <IonCard>
-                                    <IonCardContent class="ion-margin-top">
-                                        <PalavrasChaves />
-                                        <IonItemDivider mode="md" />
-                                        <ConceitosAplicados />
-                                        <IonItemDivider mode="md" />
-                                        <Referencias />
-                                    </IonCardContent>
-                                </IonCard>
-                            </IonRow>
                         </IonCol>
                     </IonGrid>
+                    <IonCard>
+                        <IonCardContent class="ion-margin-top">
+                            <PalavrasChaves />
+                            <IonItemDivider mode="md" />
+                            <ConceitosAplicados />
+                            <IonItemDivider mode="md" />
+                            <Referencias />
+                        </IonCardContent>
+                    </IonCard>
+                    <br />
                 </IonContent>
             </IonPage>
         </>
