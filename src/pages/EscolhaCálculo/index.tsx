@@ -10,24 +10,37 @@ import {
   IonCardTitle,
   IonLabel,
   IonButton,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
 } from "@ionic/react";
 import logoApp from "../../assets/logoApp.svg";
-import React from "react";
+import React, { useState } from "react";
 
 const EscolhaCalculo: React.FC = () => {
+  const calculo = useState("");
+
   return (
     <>
       <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle color="primary">Escolha do Cálculo</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
         <IonContent color="primary">
+          <br />
           <IonCard>
-            <IonCardContent class="ion-margin-top">
+            <IonCardContent>
               <IonGrid>
                 <IonCol>
                   <IonRow class="ion-justify-content-center">
-                    <img src={logoApp} />
+                    <img src={logoApp} height="205px" />
                   </IonRow>
                 </IonCol>
               </IonGrid>
+              
               <IonGrid>
                 <IonCol>
                   <IonRow class="ion-justify-content-center">
@@ -35,26 +48,35 @@ const EscolhaCalculo: React.FC = () => {
                       Escolha qual escore deseja calcular:
                     </IonLabel>
                   </IonRow>
-                  <IonGrid class='className="ion-padding-top"'>
-                    <IonRow class="ion-justify-content-center">
-                      <IonGrid className="ion-padding-horizontal">
-                        <IonButton color="secondary" expand="block">
+                 
+                    <IonRow >
+                      <IonGrid class="ion-margin-top">
+                        <IonButton
+                          color="secondary"
+                          expand="block"
+                          href="/dadosPaciente/pim"
+                          shape="round"
+                        >
                           <IonText>
                             <h2>PIM</h2>
                           </IonText>
                         </IonButton>
                       </IonGrid>
                     </IonRow>
-                    <IonRow class="ion-justify-content-center">
-                      <IonGrid className="ion-padding-horizontal">
-                        <IonButton color="secondary" expand="block">
+                    <IonRow >
+                      <IonGrid >
+                        <IonButton
+                          color="secondary"
+                          expand="block"
+                          href="/dadosPaciente/pelod"
+                          shape="round"
+                        >
                           <IonText>
                             <h2>PELOD</h2>
                           </IonText>
                         </IonButton>
                       </IonGrid>
                     </IonRow>
-                  </IonGrid>
                 </IonCol>
               </IonGrid>
             </IonCardContent>

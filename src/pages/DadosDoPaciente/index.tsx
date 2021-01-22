@@ -22,14 +22,17 @@ import React, { useState } from "react";
 
 const DadosPaciente: React.FC = () => {
   const agora = new Date().toISOString();
-  const [data, setData] = useState('');
+  const [data, setData] = useState("");
   return (
     <>
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonButton slot="start" fill='clear'>
-              <IonBackButton defaultHref="/calcular" color='primary'></IonBackButton>
+            <IonButton slot="start" fill="clear">
+              <IonBackButton
+                defaultHref="/calcular"
+                color="primary"
+              ></IonBackButton>
             </IonButton>
             <IonTitle color="primary">Dados do Paciente</IonTitle>
           </IonToolbar>
@@ -47,11 +50,14 @@ const DadosPaciente: React.FC = () => {
               </IonRow>
             </IonCol>
           </IonGrid> */}
+          <br />
           <IonCard>
-            <br/>
             <IonCardContent class="ion-margin-top">
               <IonItem>
-                <IonLabel position='stacked'> Digite o nome do paciente</IonLabel>
+                <IonLabel position="stacked">
+                  {" "}
+                  Digite o nome do paciente
+                </IonLabel>
                 <IonInput placeholder="Nome do Paciente"></IonInput>
               </IonItem>
 
@@ -70,14 +76,18 @@ const DadosPaciente: React.FC = () => {
               </IonItem>
               <br />
 
-              <IonButton color="secondary" expand="block" shape='round'>
+              <IonButton
+                color="secondary"
+                expand="block"
+                shape="round"
+                size="large"
+              >
                 <IonText>
                   <h2>Avançar</h2>
                 </IonText>
               </IonButton>
             </IonCardContent>
-            <br/>
-            
+            <br />
           </IonCard>
         </IonContent>
       </IonPage>

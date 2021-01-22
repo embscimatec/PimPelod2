@@ -44,7 +44,7 @@ const App: React.FC = () => (
           <Route path="/calcular" component={Calcular} exact={true} />
           <Route path="/informacoes" component={Informacoes} />
           <Route path="/glossario" component={Tab1} exact={true}/>
-          <Route path="/dadosPaciente" component={DadosPaciente} exact={true}/>
+          <Route path="/dadosPaciente/:escore" component={DadosPaciente} exact={true}/>
           <Route path="/" render={() => <Redirect to="/seusCalculos" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
