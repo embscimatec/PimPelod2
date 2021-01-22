@@ -13,17 +13,30 @@ import {
   IonItem,
   IonInput,
   IonDatetime,
+  IonToolbar,
+  IonTitle,
+  IonHeader,
+  IonBackButton,
 } from "@ionic/react";
 import React, { useState } from "react";
 
 const DadosPaciente: React.FC = () => {
   const agora = new Date().toISOString();
-  const [data, setData] = useState(new Date().toISOString().slice(0, 10));
+  const [data, setData] = useState('');
   return (
     <>
       <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonButton slot="start" fill='clear'>
+              <IonBackButton defaultHref="/calcular" color='primary'></IonBackButton>
+            </IonButton>
+            <IonTitle color="primary">Dados do Paciente</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
         <IonContent color="primary">
-          <IonGrid class="ion-margin">
+          {/* <IonGrid class="ion-margin">
             <IonCol class="ion-justify-content-center">
               <IonRow class="ion-justify-content-center">
                 <IonText>
@@ -33,22 +46,23 @@ const DadosPaciente: React.FC = () => {
                 </IonText>
               </IonRow>
             </IonCol>
-          </IonGrid>
-
+          </IonGrid> */}
           <IonCard>
+            <br/>
             <IonCardContent class="ion-margin-top">
               <IonItem>
+                <IonLabel position='stacked'> Digite o nome do paciente</IonLabel>
                 <IonInput placeholder="Nome do Paciente"></IonInput>
               </IonItem>
 
               <br />
               <IonItem>
-                <IonLabel position="floating" color="medium">
-                  DD/MM/YYYY
+                <IonLabel position="floating">
+                  Insira a data de nascimento
                 </IonLabel>
                 <IonDatetime
+                  placeholder="DD/MM/AAAA"
                   displayFormat="DD/MM/YYYY"
-                  min="1994-03-14"
                   max={agora}
                   value={data}
                   onIonChange={(e) => setData(e.detail.value!)}
@@ -56,12 +70,14 @@ const DadosPaciente: React.FC = () => {
               </IonItem>
               <br />
 
-              <IonButton color="secondary" expand="block">
+              <IonButton color="secondary" expand="block" shape='round'>
                 <IonText>
                   <h2>Avançar</h2>
                 </IonText>
               </IonButton>
             </IonCardContent>
+            <br/>
+            
           </IonCard>
         </IonContent>
       </IonPage>
