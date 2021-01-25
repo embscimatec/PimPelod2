@@ -47,7 +47,7 @@ const App: React.FC = () => (
           <Route path="/glossario" component={Glossario} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom" className="nav-bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon icon={fileTrayFull} />
             <IonLabel>Seus cálculos</IonLabel>
