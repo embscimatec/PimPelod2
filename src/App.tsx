@@ -34,6 +34,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Informacoes from './pages/Informacoes';
+import Glossario from './pages/Glossario';
 
 const App: React.FC = () => (
   <IonApp>
@@ -43,6 +44,7 @@ const App: React.FC = () => (
           <Route path="/tab1" component={Tab1} exact={true} />
           <Route path="/tab2" component={Tab2} exact={true} />
           <Route path="/informacoes" component={Informacoes} />
+          <Route path="/glossario" component={Glossario} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -58,7 +60,7 @@ const App: React.FC = () => (
             <IonIcon icon={informationCircle} />
             <IonLabel>Informações</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="/" href="/tab1">
+          <IonTabButton tab="glossario" href="/glossario">
             <IonIcon icon={bookmarks}  />
             <IonLabel>Glossário</IonLabel>
           </IonTabButton>
