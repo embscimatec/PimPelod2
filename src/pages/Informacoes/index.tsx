@@ -18,14 +18,11 @@ const Informacoes: React.FC = () => {
                                     </h2>
                                 </IonText>
                             </IonRow>
-                            <IonRow class="ion-justify-content-center">
-                                <CardInstrucoes />
-                            </IonRow>
-                            <IonRow class="ion-justify-content-center">
-                                <CardSobreNos />
-                            </IonRow>
                         </IonCol>
                     </IonGrid>
+                    <CardInstrucoes />
+                    <CardSobreNos />
+                    <br />
                 </IonContent>
             </IonPage>
         </>
