@@ -12,11 +12,11 @@ const ProgressBar: FunctionComponent<Valor> = ( {porcentagem} : Valor ) => {
                 <IonCardContent class="ion-margin-top">
                     <IonCol class="ion-justify-content-center">
                         <IonText>
-                            <h1>90%</h1>
+                            <h1>{porcentagem*100} %</h1>
                         </IonText>
 
                         <IonRow class="ion-margin-top">
-                            <IonProgressBar color="danger" value={0.5} />
+                            <IonProgressBar color="danger" value={porcentagem} />
                         </IonRow>
                     </IonCol>
 
