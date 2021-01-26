@@ -1,5 +1,6 @@
 import { IonCol, IonContent, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
 import React from 'react';
+import ProgressBar from '../../components/CardProgressBar';
 
 const Resultado: React.FC = () => {
 
@@ -18,6 +19,7 @@ const Resultado: React.FC = () => {
                             </IonRow>
                         </IonCol>
                     </IonGrid>
+                    <ProgressBar />
                 </IonContent>
             </IonPage>
         </>
