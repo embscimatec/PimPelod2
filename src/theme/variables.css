@@ -11,8 +11,7 @@ ion-text {
 }
 
 ion-card {
-  border-radius: 25px;
-  padding-left: 2%;
+  border-radius: 25px; 
 }
 
 ion-card-content {
@@ -29,8 +28,26 @@ ion-card-content {
   margin-bottom: 5%;
 }
 
-.titulo h2{
-  text-align: center;
+.textos h2 {
+  font-weight: bold;
+  font-size: large;
+}
+
+.referencias {
+  text-align: left;
+}
+
+.referencias p{
+  width: 100%;
+}
+
+.nav-bottom, .nav-bottom > * {
+  background-color:  #4B4BD1;
+  color:#191935;
+}
+
+.tab-selected {
+  color: #dedede;
 }
 
 /** Ionic CSS Variables **/
@@ -40,7 +57,7 @@ ion-card-content {
   --ion-color-primary-rgb: 119, 149, 244;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #5e80f0;
+  --ion-color-primary-shade: #bdc3d6;
   --ion-color-primary-tint: #89a2f3;
 
   /** secondary **/

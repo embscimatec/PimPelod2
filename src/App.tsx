@@ -34,6 +34,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Informacoes from './pages/Informacoes';
 import DadosPaciente from './pages/DadosDoPaciente';
+import Glossario from './pages/Glossario';
 
 const App: React.FC = () => (
   <IonApp>
