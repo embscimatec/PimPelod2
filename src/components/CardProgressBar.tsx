@@ -1,7 +1,11 @@
 import { IonCard, IonCol, IonRow, IonCardContent, IonText, IonProgressBar } from '@ionic/react';
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const ProgressBar: React.FC = () => {
+interface Valor {
+    porcentagem: number
+}
+
+const ProgressBar: FunctionComponent<Valor> = ( {porcentagem} : Valor ) => {
     return (
         <>
             <IonCard>

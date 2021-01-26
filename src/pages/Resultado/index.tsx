@@ -19,7 +19,7 @@ const Resultado: React.FC = () => {
                             </IonRow>
                         </IonCol>
                     </IonGrid>
-                    <ProgressBar />
+                    <ProgressBar porcentagem={0.4} />
                 </IonContent>
             </IonPage>
         </>
