@@ -10,6 +10,12 @@ ion-text {
   font-family: 'Press Start 2P';
 }
 
+ion-text h1 {
+  text-align: center;
+  color: #E00000;
+  font-size: 36;
+}
+
 ion-card {
   border-radius: 25px; 
 }
