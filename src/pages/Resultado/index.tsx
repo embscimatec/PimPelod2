@@ -1,5 +1,6 @@
 import { IonCol, IonContent, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
 import React from 'react';
+import InfoPaciente from '../../components/CardInfoPacientes';
 import ProgressBar from '../../components/CardProgressBar';
 
 const Resultado: React.FC = () => {
@@ -20,6 +21,7 @@ const Resultado: React.FC = () => {
                         </IonCol>
                     </IonGrid>
                     <ProgressBar porcentagem={0.4} />
+                    <InfoPaciente />
                 </IonContent>
             </IonPage>
         </>
