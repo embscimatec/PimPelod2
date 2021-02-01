@@ -21,7 +21,7 @@ const Resultado: React.FC = () => {
                         </IonCol>
                     </IonGrid>
                     <ProgressBar porcentagem={0.4} />
-                    <InfoPaciente />
+                    <InfoPaciente nome="fernandinha" idade={15} calculo="PIM" resultado={40} />
                 </IonContent>
             </IonPage>
         </>

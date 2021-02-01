@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { IonAvatar, IonCard, IonCardContent, IonCol, IonIcon, IonImg, IonItem, IonRow } from '@ionic/react';
 import avatar_icon from '../assets/avatar_icon.svg';
+import { calculator } from 'ionicons/icons';
 
 interface Dados {
     nome: string,
@@ -9,7 +10,7 @@ interface Dados {
     idade: number,   
 };
 
-const InfoPaciente: React.FC = () => {
+const InfoPaciente: FunctionComponent<Dados> = ( {nome, resultado, calculo, idade} : Dados ) => {
     return (
         <>
             <IonCard>
@@ -19,7 +20,7 @@ const InfoPaciente: React.FC = () => {
                             <img src={avatar_icon} />
                         </IonAvatar>
                         <div className="textos">
-                            <h2>Nome do Paciente</h2>
+                            <h2>{nome}</h2>
                         </div>
                     </IonItem>
                     <div className="dados">
@@ -34,9 +35,9 @@ const InfoPaciente: React.FC = () => {
                             <IonCol>
                                 <div className="info">
                                     <p>
-                                        40%<br />
-                                        PIM<br />
-                                        19<br />
+                                        {resultado}%<br />
+                                        {calculo}<br />
+                                        {idade}<br />
                                     </p>
                                 </div>
                             </IonCol>
