@@ -6,13 +6,17 @@ http://ionicframework.com/docs/theming/ */
   src: url('../assets/fonts/PressStart2P-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+}
+
 ion-text {
   font-family: 'Press Start 2P';
 }
 
 ion-text h1 {
   text-align: center;
-  color: #E00000;
   font-size: 36;
 }
 
