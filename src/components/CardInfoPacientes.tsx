@@ -2,6 +2,13 @@ import React from 'react';
 import { IonAvatar, IonCard, IonCardContent, IonCol, IonIcon, IonImg, IonItem, IonRow } from '@ionic/react';
 import avatar_icon from '../assets/avatar_icon.svg';
 
+interface Dados {
+    nome: string,
+    resultado: number,
+    calculo: string,
+    idade: number,   
+};
+
 const InfoPaciente: React.FC = () => {
     return (
         <>
