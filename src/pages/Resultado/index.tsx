@@ -1,4 +1,4 @@
-import { IonCol, IonContent, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
+import { IonHeader, IonToolbar, IonButton, IonBackButton, IonTitle, IonCol, IonContent, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
 import React from 'react';
 import InfoPaciente from '../../components/CardInfoPacientes';
 import ProgressBar from '../../components/CardProgressBar';
@@ -8,6 +8,14 @@ const Resultado: React.FC = () => {
     return (
         <>
             <IonPage>
+                <IonHeader>
+                    <IonToolbar>
+                        <IonButton slot="start" fill="clear">
+                            <IonBackButton defaultHref="/calcular" color="primary" text="Voltar"/>
+                        </IonButton>
+                        <IonTitle color="primary">Resultado</IonTitle>
+                    </IonToolbar>
+                </IonHeader>
                 <IonContent color="primary">
                     <IonGrid class="ion-margin">
                         <IonCol class="ion-justify-content-center">
