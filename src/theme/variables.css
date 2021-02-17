@@ -68,6 +68,15 @@ ion-card-content {
   width: 100%;
 }
 
+.erros {
+  text-align: center;
+}
+
+.erros p {
+  font-size: large;
+  font-weight: bold;
+}
+
 .nav-bottom, .nav-bottom>* {
   background-color: #4B4BD1;
   color: #191935;
