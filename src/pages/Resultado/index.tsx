@@ -17,7 +17,7 @@ const Resultado: React.FC = () => {
                     </IonToolbar>
                 </IonHeader>
                 <IonContent color="primary">
-                    <IonGrid class="ion-margin">
+                    <IonGrid>
                         <IonCol class="ion-justify-content-center">
                             <IonRow class="ion-justify-content-center">
                                 <IonText>
