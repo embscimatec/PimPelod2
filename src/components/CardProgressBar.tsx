@@ -8,10 +8,12 @@ interface Valor {
 const ProgressBar: FunctionComponent<Valor> = ( {porcentagem} : Valor ) => {
 
     const statusVital = () => {
-        if (porcentagem <= 0.4)
+        if (porcentagem <= 0.15)
             return "success";
-        else if (porcentagem > 0.4 && porcentagem < 0.7)
-            return "warning";
+        else if (porcentagem > 0.15 && porcentagem <= 0.45)
+            return "warning"
+        else if (porcentagem > 0.45 && porcentagem < 0.7)
+            return "danger";
         else
             return "dark";
     }
