@@ -9,11 +9,11 @@ const Resultado: React.FC = () => {
         <>
             <IonPage>
                 <IonHeader>
-                    <IonToolbar>
+                    <IonToolbar color="tertiary">
                         <IonButton slot="start" fill="clear">
-                            <IonBackButton defaultHref="/calcular" color="primary" text="Voltar"/>
+                            <IonBackButton defaultHref="/calcular" color="dark" text="Voltar"/>
                         </IonButton>
-                        <IonTitle color="primary">Resultado</IonTitle>
+                        <IonTitle color="dark">Resultado</IonTitle>
                     </IonToolbar>
                 </IonHeader>
                 <IonContent color="primary">
