@@ -1,37 +1,42 @@
-import React, { useState } from 'react';
-import { IonGrid, IonRow, IonCol, IonCard, IonRadioGroup, IonItem, IonRadio, IonLabel, IonList } from '@ionic/react';
+import React, { FunctionComponent, useState } from 'react';
+import {IonCard, IonRadioGroup, IonItem, IonRadio, IonLabel, IonList } from '@ionic/react';
 
 interface RadioProps {
     perguntas: Array<string>
 }
-
-export default function CardRadio({ perguntas }: RadioProps) {
+const CardRadio: FunctionComponent<RadioProps> = ( {perguntas} : RadioProps ) => {
     // const [dados, setDados] = useState<Array<boolean>>([]);
     // const [dados, setDados] = React.useState<Array<boolean>>([]);
     var dados: Array<boolean> = [];
     return (
-        <IonCard >
+        <IonCard className="card-radio-content" >
             {
-                perguntas.map((value: string, index: number) => {
+                perguntas.map((titulo: string, index: number) => {
                     return (
-                        <IonGrid>
-                            <IonRow>
-                                <IonCol><h3>{value}</h3></IonCol>
-                            </IonRow>
+                        <div key={index} className="card-radio">
+                            <span>
+                                {titulo}
+                            </span>
                             <IonList>
-                                <IonRadioGroup value={dados[index]} onIonChange={e => dados[index] = e.detail.value}>
-                                    <IonLabel>Sim</IonLabel>
-                                    <IonRadio slot="start" value={true} />
-                                    <IonLabel>Não</IonLabel>
-                                    <IonRadio slot="start" value={false} />
+                                <IonRadioGroup onIonChange={e => dados[index] = e.detail.value}>
+                                    <IonItem>
+                                        <IonRadio value={true}/>
+                                        <IonLabel style={{paddingLeft: '5px'}}>Sim</IonLabel>
+                                    </IonItem>
+
+                                    <IonItem>
+                                        <IonRadio value={false}/>
+                                        <IonLabel style={{paddingLeft: '5px'}}>Não</IonLabel>
+                                    </IonItem>
                                 </IonRadioGroup>
                             </IonList>
-                            <hr></hr>
-                        </IonGrid>
+                            <hr/>
+                        </div>
                     )
                 })
             }
-            <button onClick={() => console.log(dados)}>CLICAAAAAAAA</button>
+            {/* <button onClick={() => console.log(dados)}>CLICAAAAAAAA</button> */}
         </IonCard>
     );
 }
+export default CardRadio;

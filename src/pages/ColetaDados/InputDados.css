@@ -1,0 +1,25 @@
+.card-radio-content {
+    padding: 30px;
+}
+
+.card-radio {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.card-radio span {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.card-radio hr {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.card-radio-escolha {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,6 +1,7 @@
 import { IonPage, IonContent, IonGrid, IonRow, IonText, IonCol, IonList, IonCard, IonCardContent, IonItemDivider } from '@ionic/react';
 import React from 'react';
 import CardRadio from './components/CardRadio';
+import './InputDados.css'
 // import PalavrasChaves from './components/CardPalavrasChaves';
 // import Referencias from './components/CardReferencias';
 
