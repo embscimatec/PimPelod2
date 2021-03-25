@@ -1,42 +1,70 @@
 import React, { FunctionComponent, useState } from 'react';
-import {IonCard, IonRadioGroup, IonItem, IonRadio, IonLabel, IonList } from '@ionic/react';
+import { IonCard, IonRadioGroup, IonItem, IonRadio, IonLabel, IonList, IonTitle } from '@ionic/react';
+import { truncate } from 'fs';
+
+interface CardsRadio {
+    pergunta: string,
+    isdisabled: boolean,
+    resposta?: boolean,
+}
 
 interface RadioProps {
-    perguntas: Array<string>
+    index: number,
+    setArray(a: Array<CardsRadio>): void,
+    arr: Array<CardsRadio>
 }
-const CardRadio: FunctionComponent<RadioProps> = ( {perguntas} : RadioProps ) => {
-    // const [dados, setDados] = useState<Array<boolean>>([]);
-    // const [dados, setDados] = React.useState<Array<boolean>>([]);
-    var dados: Array<boolean> = [];
-    return (
-        <IonCard className="card-radio-content" >
-            {
-                perguntas.map((titulo: string, index: number) => {
-                    return (
-                        <div key={index} className="card-radio">
-                            <span>
-                                {titulo}
-                            </span>
-                            <IonList>
-                                <IonRadioGroup onIonChange={e => dados[index] = e.detail.value}>
-                                    <IonItem>
-                                        <IonRadio value={true}/>
-                                        <IonLabel style={{paddingLeft: '5px'}}>Sim</IonLabel>
-                                    </IonItem>
+const CardRadio: FunctionComponent<RadioProps> = ({ index, setArray, arr }: RadioProps) => {
 
-                                    <IonItem>
-                                        <IonRadio value={false}/>
-                                        <IonLabel style={{paddingLeft: '5px'}}>Não</IonLabel>
-                                    </IonItem>
-                                </IonRadioGroup>
-                            </IonList>
-                            <hr/>
-                        </div>
-                    )
-                })
-            }
+    const [option, setOption] = useState<boolean>();
+
+    function setNewArray(value: boolean) : void {
+        var aux : Array<CardsRadio> = arr;
+        aux[index].resposta = value;
+        setArray(aux)
+    }
+
+
+    function setEscolha(value: boolean): void {
+        setOption(value)
+        setNewArray(value)
+    }
+
+    return (
+        <div className="card-radio">
+            <IonList>
+                <IonTitle>
+                    {arr[index].pergunta}
+                </IonTitle>
+                {arr[index].isdisabled ?
+                    <IonRadioGroup value={arr[index].resposta} onIonChange={e => setEscolha(e.detail.value)}>
+                        <IonItem>
+                            <IonRadio value={true} disabled />
+                            <IonLabel style={{ paddingLeft: '5px' }}>Sim</IonLabel>
+                        </IonItem>
+
+                        <IonItem>
+                            <IonRadio value={false} disabled />
+                            <IonLabel style={{ paddingLeft: '5px' }}>Não</IonLabel>
+                        </IonItem>
+                    </IonRadioGroup>
+                    :
+                    <IonRadioGroup value={option} onIonChange={e => setEscolha(e.detail.value)}>
+                        <IonItem>
+                            <IonRadio value={true} />
+                            <IonLabel style={{ paddingLeft: '5px' }}>Sim</IonLabel>
+                        </IonItem>
+
+                        <IonItem>
+                            <IonRadio value={false} />
+                            <IonLabel style={{ paddingLeft: '5px' }}>Não</IonLabel>
+                        </IonItem>
+                    </IonRadioGroup>
+                }
+            </IonList>
+            <hr />
             {/* <button onClick={() => console.log(dados)}>CLICAAAAAAAA</button> */}
-        </IonCard>
+        </div>
+
     );
 }
 export default CardRadio;

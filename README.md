@@ -105,4 +105,4 @@ Para executar em um dispositivo android conectado:
 
 - [@DhellionFena](https://github.com/DhellionFena) - Trabalho inicial e desenvolvimento
 - [@fernandanlisboa](https://github.com/fernandanlisboa) - Trabalho inicial e desenvolvimento
-- [@AmadoMaria](https://github.com/DhellionFena) - Ideia e desenvolvimento
+- [@AmadoMaria](https://github.com/AmadoMaria) - Ideia e desenvolvimento
