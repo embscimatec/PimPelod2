@@ -1,4 +1,4 @@
-import { IonPage, IonContent, IonGrid, IonRow, IonText, IonCol, IonList, IonCard, IonCardContent, IonItemDivider } from '@ionic/react';
+import { IonPage, IonContent, IonCard } from '@ionic/react';
 import { truncate } from 'fs';
 import { car } from 'ionicons/icons';
 import React, {useState} from 'react';
@@ -38,6 +38,17 @@ var lista_cards : Array<CardsRadio> = [
         isdisabled: false,
     },
 ]
+
+export function ValidationArray(arr : Array<CardsRadio>) {
+    let faltam = arr.filter(item => item.resposta === undefined);
+
+    if (faltam.length > 0) {
+        //faltam preencher dados
+        return false;
+    }
+    //não achou dados faltando
+    return true;
+}
 
 const ColetaDados: React.FC = () => {
 

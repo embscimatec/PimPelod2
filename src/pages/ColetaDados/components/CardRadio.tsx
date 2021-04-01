@@ -28,13 +28,13 @@ const CardRadio: FunctionComponent<RadioProps> = ({ index, setArray, arr }: Radi
         setOption(value)
         setNewArray(value)
     }
-
+ 
     return (
         <div className="card-radio">
             <IonList>
-                <IonTitle>
+                <h4 className="pergunta">
                     {arr[index].pergunta}
-                </IonTitle>
+                </h4>
                 {arr[index].isdisabled ?
                     <IonRadioGroup value={arr[index].resposta} onIonChange={e => setEscolha(e.detail.value)}>
                         <IonItem>
