@@ -1,6 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
-import { IonCard, IonRadioGroup, IonItem, IonRadio, IonLabel, IonList, IonTitle } from '@ionic/react';
-import { truncate } from 'fs';
+import { IonRadioGroup, IonItem, IonRadio, IonLabel, IonList } from '@ionic/react';
 
 interface CardsRadio {
     pergunta: string,
@@ -62,7 +61,6 @@ const CardRadio: FunctionComponent<RadioProps> = ({ index, setArray, arr }: Radi
                 }
             </IonList>
             <hr />
-            {/* <button onClick={() => console.log(dados)}>CLICAAAAAAAA</button> */}
         </div>
 
     );
