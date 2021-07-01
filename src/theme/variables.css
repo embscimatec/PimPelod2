@@ -1,4 +1,5 @@
-/* Ionic Variables and Theming. For more info, please see:
+/* Ionic Variables and Theming. For more info, 
+lease see:
 http://ionicframework.com/docs/theming/ */
 
 @font-face {
@@ -31,13 +32,13 @@ ion-card-content {
 .dados {
   text-align: left;
   margin: 5%;
-  font-family: Roboto;
+  /* font-family: Roboto; */
 }
 
 .dados p {
   line-height: 2;
   font-size: larger;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .info {
@@ -84,6 +85,92 @@ ion-card-content {
 
 .tab-selected {
   color: #dedede;
+}
+
+.card-radio-content {
+  padding: 30px;
+}
+
+.card-radio {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.card-radio span {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.card-radio hr {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.card-radio-escolha {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  /* margin-bottom: 3px; */
+}
+
+.pergunta {
+  margin: 0 8px 2px 9px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.card-input-text {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3%;
+}
+
+.card-dados-paciente {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5% 3%;
+}
+
+.card-dados-paciente h4{
+  margin: 0 8px 2px 9px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.input-text {
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.coleta-titulo {
+  font-family: 'Press Start 2P';
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.div-btn {
+  width: 100vw;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coleta-dados-btn {
+  background-color: var(--ion-color-secondary);
+  padding: 20px;
+  width: 70%;
+  font-family: 'Press Start 2P';
+  font-size: 1.3rem;
+  border-radius: 50px;
 }
 
 /** Ionic CSS Variables **/

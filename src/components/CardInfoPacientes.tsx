@@ -7,44 +7,46 @@ interface Dados {
     nome: string,
     resultado: number,
     calculo: string,
-    idade: number,   
+    idade: number,
 };
 
-const InfoPaciente: FunctionComponent<Dados> = ( {nome, resultado, calculo, idade} : Dados ) => {
+const InfoPaciente: FunctionComponent<Dados> = ({ nome, resultado, calculo, idade }: Dados) => {
     return (
         <>
-            <IonCard>
-                <IonCardContent class="ion-margin-top">
-                    <IonItem>
-                        <IonAvatar slot="start">
-                            <img src={avatar_icon} />
-                        </IonAvatar>
-                        <div className="textos">
-                            <h2>{nome}</h2>
-                        </div>
-                    </IonItem>
-                    <div className="dados">
-                        <IonRow>
-                            <IonCol>
-                                <p>
-                                    Situação:<br />
-                                    Método:<br />
-                                    Idade:<br />
-                                </p>
-                            </IonCol>
-                            <IonCol>
-                                <div className="info">
-                                    <p>
-                                        {resultado}%<br />
-                                        {calculo}<br />
-                                        {idade}<br />
-                                    </p>
-                                </div>
-                            </IonCol>
-                        </IonRow>
-                    </div>
-                </IonCardContent>
-            </IonCard>
+            <IonItem>
+                <IonAvatar slot="start">
+                    <img src={avatar_icon} />
+                </IonAvatar>
+                <h4 className="pergunta">{nome}</h4>
+            </IonItem>
+            <div className="card-dados-paciente">
+                <h4>
+                    Situação:<br />
+                    {/* Método:<br />
+                    Idade:<br />
+                     */}
+                </h4>
+                <h4 >
+                    {resultado}%
+
+                </h4>
+            </div>
+            <div className="card-dados-paciente">
+                <h4>
+                    Método:
+                </h4>
+                <h4>
+                    {calculo}
+                </h4>
+            </div>
+            <div className="card-dados-paciente">
+                <h4>
+                    Idade:
+                </h4>
+                <h4>
+                    {idade}
+                </h4>
+            </div>
         </>
     );
 };

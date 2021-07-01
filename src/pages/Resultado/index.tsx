@@ -89,8 +89,9 @@ const Resultado: React.FC = () => {
                         </IonCol>
                     </IonGrid>
                     <ProgressBar porcentagem={0.5} />
-                    <InfoPaciente nome="fernandinha" idade={15} calculo="PIM" resultado={40} />
-
+                    <IonCard className="card-radio-content" >
+                        <InfoPaciente nome="fernandinha" idade={15} calculo="PIM" resultado={40} />
+                    </IonCard>
                     <IonCard className="card-radio-content" >
                         {textArray.map((value, index) => {
                             return (
