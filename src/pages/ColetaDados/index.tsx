@@ -3,21 +3,11 @@ import React, {useState} from 'react';
 import CardRadio from './components/CardRadio';
 import CardInputText from './components/CardInputText';
 import './InputDados.css'
+import { CardsRadio, CardsText } from '../../interfaces/Cards';
 // import PalavrasChaves from './components/CardPalavrasChaves';
 // import Referencias from './components/CardReferencias';
 
-interface CardsRadio {
-    pergunta: string,
-    isdisabled: boolean,
-    resposta?: boolean,
-}
 
-interface CardsText {
-    pergunta: string,
-    unidade_medida: string,
-    isdisabled: boolean,
-    resposta?: number,
-}
 
 const lista_input_text : Array<CardsText> = [
     {

@@ -1,9 +1,69 @@
-import { IonHeader, IonToolbar, IonButton, IonBackButton, IonTitle, IonCol, IonContent, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
-import React from 'react';
+import { IonHeader, IonToolbar, IonButton, IonBackButton, IonTitle, IonCol, IonContent, IonGrid, IonPage, IonRow, IonText, IonCard } from '@ionic/react';
+import React, { useState } from 'react';
 import InfoPaciente from '../../components/CardInfoPacientes';
 import ProgressBar from '../../components/CardProgressBar';
+import CardInputText from '../ColetaDados/components/CardInputText';
+import CardRadio from '../ColetaDados/components/CardRadio';
+import { CardsRadio, CardsText } from '../../interfaces/Cards';
+
+
+const lista_input_text : Array<CardsText> = [
+    {
+        pergunta: "Pressão sistólica:",
+        unidade_medida: "mmHg",
+        isdisabled: false,
+    },
+    {
+        pergunta: "PaO2:",
+        unidade_medida: "mmHg",
+        resposta: 10,
+        isdisabled: true,
+    },
+    {
+        pergunta: "FiO2:",
+        unidade_medida: "%",
+        isdisabled: false,
+    },
+    {
+        pergunta: "Base de excesso:",
+        unidade_medida: "mmHg",
+        isdisabled: false,
+    }
+    
+]
+
+const lista_cards_radio : Array<CardsRadio> = [
+    {
+        pergunta: "Reação das pupilas:",
+        isdisabled: false,
+    },
+    {
+        pergunta: "Diagnóstico de alto risco:",
+        isdisabled: false,
+    },
+    {
+        pergunta: "Ventilação mecânica:",
+        isdisabled: false,
+    },
+    {
+        pergunta: "Recuperação cirúrgica ou de conhecimento como principal razãode entrada:",
+        isdisabled: false,
+    },
+    {
+        pergunta: "Admissão após circulação extracorpórea:",
+        isdisabled: false,
+    },
+    {
+        pergunta: "Admissão eletiva:",
+        isdisabled: false,
+    },
+]
+
 
 const Resultado: React.FC = () => {
+
+    const [radioInput, setRadioInput] = useState<Array<CardsRadio>>(lista_cards_radio)
+    const [textArray, setTextArray] = useState<Array<CardsText>>(lista_input_text)
 
     return (
         <>
@@ -30,6 +90,32 @@ const Resultado: React.FC = () => {
                     </IonGrid>
                     <ProgressBar porcentagem={0.5} />
                     <InfoPaciente nome="fernandinha" idade={15} calculo="PIM" resultado={40} />
+
+                    <IonCard className="card-radio-content" >
+                        {textArray.map((value, index) => {
+                            return (
+                                <CardInputText 
+                                key={index}
+                                index={index}
+                                arr={textArray}
+                                setArray={setTextArray}
+                               />
+                            )
+                        })}
+                    </IonCard>
+
+                    <IonCard className="card-radio-content" >
+                        {radioInput.map((value, index) => {
+                            return (
+                                <CardRadio 
+                                key={index}
+                                index={index}
+                                arr={radioInput}
+                                setArray={setRadioInput}
+                               />
+                            )
+                        })}
+                    </IonCard>
                 </IonContent>
             </IonPage>
         </>
