@@ -1,12 +1,10 @@
-import { IonPage, IonContent, IonCard, IonTitle } from '@ionic/react';
-import React, {useState} from 'react';
-import CardRadio from './components/CardRadio';
-import CardInputText from './components/CardInputText';
-import './InputDados.css'
+import { IonHeader, IonToolbar, IonButton, IonBackButton, IonTitle, IonCol, IonContent, IonGrid, IonPage, IonRow, IonText, IonCard } from '@ionic/react';
+import React, { useState } from 'react';
+import InfoPaciente from '../../components/CardInfoPacientes';
+import ProgressBar from '../../components/CardProgressBar';
+import CardInputText from '../ColetaDados/components/CardInputText';
+import CardRadio from '../ColetaDados/components/CardRadio';
 import { CardsRadio, CardsText } from '../../interfaces/Cards';
-// import PalavrasChaves from './components/CardPalavrasChaves';
-// import Referencias from './components/CardReferencias';
-
 
 
 const lista_input_text : Array<CardsText> = [
@@ -61,18 +59,8 @@ const lista_cards_radio : Array<CardsRadio> = [
     },
 ]
 
-export function ValidationArray(arr : Array<CardsRadio>) {
-    let faltam = arr.filter(item => item.resposta === undefined);
 
-    if (faltam.length > 0) {
-        //faltam preencher dados
-        return false;
-    }
-    //não achou dados faltando
-    return true;
-}
-
-const ColetaDados: React.FC = () => {
+const Resultado: React.FC = () => {
 
     const [radioInput, setRadioInput] = useState<Array<CardsRadio>>(lista_cards_radio)
     const [textArray, setTextArray] = useState<Array<CardsText>>(lista_input_text)
@@ -80,10 +68,30 @@ const ColetaDados: React.FC = () => {
     return (
         <>
             <IonPage>
-                <IonContent color="primary" >
-                    <br/>
-                    <h1 className="coleta-titulo">Coleta de dados</h1>
-                    <br/>
+                <IonHeader>
+                    <IonToolbar color="tertiary">
+                        <IonButton slot="start" fill="clear">
+                            <IonBackButton defaultHref="/calcular" color="dark" text="Voltar"/>
+                        </IonButton>
+                        <IonTitle color="dark">Resultado</IonTitle>
+                    </IonToolbar>
+                </IonHeader>
+                <IonContent color="primary">
+                    <IonGrid>
+                        <IonCol class="ion-justify-content-center">
+                            <IonRow class="ion-justify-content-center">
+                                <IonText>
+                                    <h2>
+                                        RESULTADO
+                                    </h2>
+                                </IonText>
+                            </IonRow>
+                        </IonCol>
+                    </IonGrid>
+                    <ProgressBar porcentagem={0.5} />
+                    <IonCard className="card-radio-content" >
+                        <InfoPaciente nome="fernandinha" idade={15} calculo="PIM" resultado={40} />
+                    </IonCard>
                     <IonCard className="card-radio-content" >
                         {textArray.map((value, index) => {
                             return (
@@ -109,13 +117,10 @@ const ColetaDados: React.FC = () => {
                             )
                         })}
                     </IonCard>
-                    <div className="div-btn">
-                    <button className="coleta-dados-btn" onClick={e =>{console.log(textArray); console.log(radioInput)}}>CONTINUAR</button>
-                        </div>
                 </IonContent>
             </IonPage>
         </>
     );
 };
 
-export default ColetaDados;
+export default Resultado;

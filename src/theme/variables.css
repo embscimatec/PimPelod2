@@ -1,4 +1,5 @@
-/* Ionic Variables and Theming. For more info, please see:
+/* Ionic Variables and Theming. For more info, 
+lease see:
 http://ionicframework.com/docs/theming/ */
 
 @font-face {
@@ -6,16 +7,43 @@ http://ionicframework.com/docs/theming/ */
   src: url('../assets/fonts/PressStart2P-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+}
+
 ion-text {
   font-family: 'Press Start 2P';
 }
 
+ion-text h1 {
+  text-align: center;
+  font-size: 36;
+}
+
 ion-card {
-  border-radius: 25px; 
+  border-radius: 25px;
 }
 
 ion-card-content {
   color: #000000;
+}
+
+.dados {
+  text-align: left;
+  margin: 5%;
+  /* font-family: Roboto; */
+}
+
+.dados p {
+  line-height: 2;
+  font-size: larger;
+  /* font-weight: bold; */
+}
+
+.info {
+  color: rgb(59, 59, 59);
+  text-align: center;
 }
 
 .textos p {
@@ -37,20 +65,116 @@ ion-card-content {
   text-align: left;
 }
 
-.referencias p{
+.referencias p {
   width: 100%;
 }
 
-.nav-bottom, .nav-bottom > * {
-  background-color:  #4B4BD1;
-  color:#191935;
+.erros {
+  text-align: center;
+}
+
+.erros p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.nav-bottom, .nav-bottom>* {
+  background-color: #4B4BD1;
+  color: #191935;
 }
 
 .tab-selected {
   color: #dedede;
 }
 
+.card-radio-content {
+  padding: 30px;
+}
+
+.card-radio {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.card-radio span {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.card-radio hr {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.card-radio-escolha {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  /* margin-bottom: 3px; */
+}
+
+.pergunta {
+  margin: 0 8px 2px 9px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.card-input-text {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3%;
+}
+
+.card-dados-paciente {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5% 3%;
+}
+
+.card-dados-paciente h4{
+  margin: 0 8px 2px 9px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.input-text {
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.coleta-titulo {
+  font-family: 'Press Start 2P';
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.div-btn {
+  width: 100vw;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coleta-dados-btn {
+  background-color: var(--ion-color-secondary);
+  padding: 20px;
+  width: 70%;
+  font-family: 'Press Start 2P';
+  font-size: 1.3rem;
+  border-radius: 50px;
+}
+
 /** Ionic CSS Variables **/
+
 :root {
   /** primary **/
   --ion-color-primary: #7795F4;
@@ -59,7 +183,6 @@ ion-card-content {
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #bdc3d6;
   --ion-color-primary-tint: #89a2f3;
-
   /** secondary **/
   --ion-color-secondary: #4B4BD1;
   --ion-color-secondary-rgb: 75, 75, 209;
@@ -67,7 +190,6 @@ ion-card-content {
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #3a3ad3;
   --ion-color-secondary-tint: #5b5bcf;
-
   /** tertiary **/
   --ion-color-tertiary: #323289;
   --ion-color-tertiary-rgb: 50, 50, 137;
@@ -75,7 +197,6 @@ ion-card-content {
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
   --ion-color-tertiary-shade: #28288a;
   --ion-color-tertiary-tint: #3d3d8f;
-
   /** success **/
   --ion-color-success: #2dd36f;
   --ion-color-success-rgb: 45, 211, 111;
@@ -83,7 +204,6 @@ ion-card-content {
   --ion-color-success-contrast-rgb: 255, 255, 255;
   --ion-color-success-shade: #28ba62;
   --ion-color-success-tint: #42d77d;
-
   /** warning **/
   --ion-color-warning: #ffc409;
   --ion-color-warning-rgb: 255, 196, 9;
@@ -91,15 +211,13 @@ ion-card-content {
   --ion-color-warning-contrast-rgb: 0, 0, 0;
   --ion-color-warning-shade: #e0ac08;
   --ion-color-warning-tint: #ffca22;
-
   /** danger **/
-  --ion-color-danger: #eb445a;
+  --ion-color-danger: #E00000;
   --ion-color-danger-rgb: 235, 68, 90;
   --ion-color-danger-contrast: #ffffff;
   --ion-color-danger-contrast-rgb: 255, 255, 255;
-  --ion-color-danger-shade: #cf3c4f;
-  --ion-color-danger-tint: #ed576b;
-
+  --ion-color-danger-shade: #a00404;
+  --ion-color-danger-tint: #e91f1f;
   /** dark **/
   --ion-color-dark: #222428;
   --ion-color-dark-rgb: 34, 36, 40;
@@ -107,7 +225,6 @@ ion-card-content {
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #1e2023;
   --ion-color-dark-tint: #383a3e;
-
   /** medium **/
   --ion-color-medium: #92949c;
   --ion-color-medium-rgb: 146, 148, 156;
@@ -115,7 +232,6 @@ ion-card-content {
   --ion-color-medium-contrast-rgb: 255, 255, 255;
   --ion-color-medium-shade: #808289;
   --ion-color-medium-tint: #9d9fa6;
-
   /** light **/
   --ion-color-light: #f4f5f8;
   --ion-color-light-rgb: 244, 245, 248;

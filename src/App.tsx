@@ -35,6 +35,7 @@ import './theme/variables.css';
 import Informacoes from './pages/Informacoes';
 import DadosPaciente from './pages/DadosDoPaciente';
 import Glossario from './pages/Glossario';
+import Resultado from './pages/Resultado';
 import ColetaDados from './pages/ColetaDados';
 
 const App: React.FC = () => (
@@ -46,6 +47,8 @@ const App: React.FC = () => (
           <Route path="/calcular" component={Calcular} exact={true} />
           <Route path="/informacoes" component={Informacoes} />
           <Route path="/glossario" component={Glossario} />
+          <Route path="/resultado" component={Resultado} />
+          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
           <Route path="/coletadados" component={ColetaDados} />
           <Route path="/dadosPaciente/:escore" component={DadosPaciente} exact={true}/>
           <Route path="/" render={() => <Redirect to="/seusCalculos" />} exact={true} />
